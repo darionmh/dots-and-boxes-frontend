@@ -1,0 +1,63 @@
+@import "./colors.scss";
+@import "./global.scss";
+
+.line-wrapper {
+    height: $line-weight;
+    width: $line-weight;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        .line{
+            background-color: $grey !important;
+        }
+    }
+
+    &.vertical{
+        width: $line-weight;
+        height: 100px;
+    }
+
+    &.horizontal{
+        width: 100px;
+        height: $line-weight;
+
+        .dot{
+            width: $line-weight * 2;
+            height: $line-weight * 2;
+    
+            background-color: $black;
+            border-radius: 100%;
+        }
+    }
+
+    .line {
+        background-color: $transparent-black;
+        z-index: 1;
+    
+        &.vertical{
+            width: $line-weight;
+            height: 100px;
+            transform: scaleY(1.05);
+        }
+    
+        &.horizontal{
+            width: 100px;
+            height: $line-weight;
+            transform: scaleX(1.05);
+        }
+    }
+}
+
+.dot{
+    background-color: $black;
+
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.box{
+    // background-color: $blue;
+}

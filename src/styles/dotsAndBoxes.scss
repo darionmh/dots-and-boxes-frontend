@@ -1,0 +1,43 @@
+@import "./colors.scss";
+
+.game-wrapper{
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .spacer{
+        width: 30%;
+    }
+
+    .player-list{
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-auto-rows: 10%;
+        
+        border: 1px solid black;
+        padding: 10px;
+        width: 30%;
+        border-radius: 10px;
+        margin: 10px;
+
+        background-color: #2c3e50;
+
+        .player-list-item{
+            float: left;
+            &:not(:last-child){
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    .board{
+        width: 40%;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(5, 6px 100px) 6px;
+        grid-auto-rows: repeat(5, 6px 100px) 6px;
+        grid-gap: 0px;
+        // border: 1px solid black;
+    }
+}
