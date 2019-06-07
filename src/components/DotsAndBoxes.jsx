@@ -6,7 +6,8 @@ import "../styles/dotsAndBoxes.scss"
 import PlayerPreferences from './PlayerPreferences';
 import { Icon } from 'semantic-ui-react';
 
-const URL = 'ws://localhost:3030'
+const URL = process.env.WS_ADDR ? process.env.WS_ADDR : 'ws://localhost:3030'
+console.log(URL)
 
 const BOARD_SIZE = 11
 
